@@ -26,6 +26,7 @@ nameserver 10.16.1.253
 ```
 
 ## Apache Installieren
+-  Eventuell update & upgrade nicht nötig
 ```
 apt update
 apt upgrade
