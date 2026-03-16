@@ -1,5 +1,26 @@
 # Arbeit Debian Webserver
 
+## Netzwerkkonfiguration
+```
+cp /etc/network/interfaces /etc/network/interfaces_backup
+nano /etc/network/interfaces
+```
+``` interfaces
+auto enp0s3
+iface enp0s3 inet static
+address 10.16.raumnummer.pcnummer+200/8
+gateway 10.16.1.245
+```
+```
+systemctl restart networking
+```
+```
+nano /etc/resolv.conf
+```
+``` resolv.conf
+nameserver 10.16.1.253
+```
+
 ## Apache Installieren
 ```
 apt update
