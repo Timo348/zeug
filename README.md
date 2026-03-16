@@ -1,8 +1,12 @@
 # Arbeit Debian Webserver
 
 ## Netzwerkkonfiguration
+### Backup der Netzwerk interfaces
 ```
 cp /etc/network/interfaces /etc/network/interfaces_backup
+```
+### interfaces auf Statische IP statt dhcp ändern
+```
 nano /etc/network/interfaces
 ```
 ``` interfaces
