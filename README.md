@@ -90,3 +90,10 @@ Passwort eingeben.
 Apache Neustarten (systemctl restart apache2)
 ## Testen
 http://localhost/~username
+
+## Falls was nicht Funktioniert
+Wenn Netzwerkkonfiguration nicht funktioniert
+- dhcp entfernen
+```
+apt purge isc-dhcp-client
+```
