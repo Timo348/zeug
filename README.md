@@ -23,7 +23,7 @@ chmod 755 /home/username/public_html
 nano home/username/public_html/index.html
 chmod 644 home/username/public_html/index.html
 ```
-## htaccess
+## htaccess Konfigurieren
 ```
 sudo nano /etc/apache2/mods-enabled/userdir.conf
 ```
@@ -40,3 +40,27 @@ Er sollte ungefähr so aussehen:
 </Directory>
 ```
 Wichtig ist AllowOverride All
+Apache Neustarten (systemctl restart apache2)
+### htaccess Datei erstellen
+```
+nano /home/test/public_html/.htaccess
+```
+```
+AuthType Basic
+AuthName "Geschützter Bereich"
+AuthUserFile /home/test/.htpasswd
+Require valid-user
+```
+### Passwortdatei erstellen
+Tool installieren (falls fehlt):
+```
+sudo apt install apache2-utils
+```
+Dann Benutzer für Login anlegen:
+```
+sudo htpasswd -c /home/test/.htpasswd testuser
+```
+Passwort eingeben.
+Apache Neustarten (systemctl restart apache2)
+## Testen
+http://localhost/~username
