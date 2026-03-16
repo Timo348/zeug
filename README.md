@@ -91,9 +91,11 @@ Apache Neustarten (systemctl restart apache2)
 ## Testen
 http://localhost/~username
 
-## Falls was nicht Funktioniert
+## Falls was nicht Funktioniert / Tips
 Wenn Netzwerkkonfiguration nicht funktioniert
 - dhcp entfernen
 ```
 apt purge isc-dhcp-client
 ```
+Bei der VM in den Einstellen Gemeinsame Zwichenablage auf bidirektional einstellen für copy & paste
+
